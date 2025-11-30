@@ -1,4 +1,4 @@
-name: Build HuggingFace Folder Image
+name: Build Docker Folder Image
 
 on:
   push:
@@ -51,9 +51,9 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           # 关键点：设置上下文为 hugging-face 文件夹
-          context: ./hugging-face
+          context: ./hfne
           # Dockerfile 就在在这个文件夹里
-          file: ./hugging-face/Dockerfile
+          file: ./hfne/Dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
