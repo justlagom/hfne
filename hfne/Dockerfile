@@ -17,7 +17,7 @@ RUN apt-get update; \
 
 FROM ubuntu:22.04
 
-LABEL org.opencontainers.image.source="https://github.com/justlagom/edonyxorp"
+LABEL org.opencontainers.image.source="https://github.com/justlagom/hfne"
 
 ENV TZ=Asia/Shanghai \
     UUID=自定义变量uuid \
