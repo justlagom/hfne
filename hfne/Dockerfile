@@ -9,7 +9,7 @@ WORKDIR /app
 # 优化下载和清理操作，使用 '&&' 连接命令以减少镜像层数
 RUN set -x && \
     for i in 1 2 3; do apt-get update && break || sleep 5; done && \
-    apt-get install -y --no-install-recommends wget unzip && \
+    apt-get install -y --no-install-recommends wget unzip ca-certificates && \
     # 下载 Xray-core
     wget https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip && \
     unzip Xray-linux-64.zip && \
