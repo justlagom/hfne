@@ -1,3 +1,3 @@
 #!/usr/bin/env sh
 
-docker build -t justlagom/hfn .
+docker build -t justlagom/hfne .
