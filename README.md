@@ -17,7 +17,7 @@
 
 部署此项目非常简单，主要通过配置 Hugging Face Spaces 的环境变量完成。
 
-## hfne/app/xy/config.json-可选择手搓其他xraypeizhi
+## hfne/app/xy/config.json-可选择手搓其他xray配置
 
 ### 步骤 1: 创建新的 Space
 
