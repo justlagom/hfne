@@ -17,6 +17,8 @@
 
 部署此项目非常简单，主要通过配置 Hugging Face Spaces 的环境变量完成。
 
+## hfne/app/xy/config.json-可选择手搓其他xraypeizhi
+
 ### 步骤 1: 创建新的 Space
 
 1.  访问 [Hugging Face Spaces](https://huggingface.co/new-space) 创建新项目。
