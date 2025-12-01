@@ -29,7 +29,9 @@
 
 由于您使用的是 Docker SDK，您需要将本项目仓库中的所有文件（特别是 `Dockerfile` 和您的核心代码）上传到新的 Space 仓库中。
 
-> **提示:** 您可以直接 Fork `justlagom/hfne` 仓库，然后使用 Git LFS 或通过 Hugging Face 界面导入文件。
+> **提示:** 您可以直接 Fork `justlagom/hfne` 仓库，然后创建自己的docker镜像文件。
+> 找到 **"files"** 编辑dockerfile - from ghcr.io/xxxxxxxxxxx
+> **Commint changes to main**
 
 ### 步骤 3: 配置环境变量
 
@@ -37,7 +39,8 @@
 
 | 变量名 | 描述 | 示例值 |
 | :--- | :--- | :--- |
-| **`ENC_CONFIG`** | 您的代理配置信息，通常是一个 JSON 字符串，包含 UUID、Path、端口等信息。 | `{"uuid": "...", "path": "/your_path", "port": 8080}` |
+| **`UUID`** | 必备 | `随你便` |
+| **`DOMAIN`** | 必备 | `空间创建后可见分配的项目域名` |
 
 ### 步骤 4: 启动 Space
 
