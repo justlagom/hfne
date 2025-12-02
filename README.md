@@ -18,6 +18,7 @@
 部署此项目非常简单，主要通过配置 Hugging Face Spaces 的环境变量完成。
 
 ## hfne/app/xy/config.json-可选择手搓其他xray配置
+vless://%E8%87%AA%E5%AE%9A%E4%B9%89uuid@项目域名:443?encryption=mlkem768x25519plus.native.0rtt.fRLKjkBNx1N6ceiqcqilb46WNj4yvl4SgXklAFkvNhE&flow=xtls-rprx-vision&security=tls&sni=%E9%A1%B9%E7%9B%AE%E5%9F%9F%E5%90%8D&fp=chrome&alpn=h2&insecure=0&allowInsecure=0&type=xhttp&path=%2Fb3a053a4&mode=auto#%E6%A8%A1%E6%9D%BFUS%20ENC-Vision-Xhttp%EF%BC%88Hugging%20Face%EF%BC%89
 
 ### 步骤 1: 创建新的 Space
 
