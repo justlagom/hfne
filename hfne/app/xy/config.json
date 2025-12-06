@@ -16,7 +16,7 @@
       "settings": {
         "clients": [
           {
-            "email": "ng-xhttp",
+            "email": "nginxxray",
             "flow": "xtls-rprx-vision",
             "id": "UUID"
           }
@@ -51,10 +51,7 @@
   ],
   "outbounds": [
     {
-      "protocol": "freedom",
-      "settings": {
-        "domainStrategy": "UseIP"
-      }
+      "protocol": "freedom"
     }
   ]
 }
