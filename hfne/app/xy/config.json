@@ -10,7 +10,7 @@
   },
   "inbounds": [
        {
-      "listen": null，
+      "listen": null, 
       "port": 8080,
       "protocol": "vless",
       "settings": {
