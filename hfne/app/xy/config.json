@@ -39,13 +39,6 @@
           "scStreamUpServerSecs": "20-80",
           "xPaddingBytes": "100-1000"
         }
-      },
-      "sniffing": {
-        "enabled": true,
-        "destOverride": [
-          "http",
-          "tls"
-        ]
       }
     }
   ],
