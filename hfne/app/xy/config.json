@@ -10,13 +10,13 @@
   },
   "inbounds": [
        {
-      "listen": null,
+      "listen": "127.0.0.1", // 明确绑定到本地环回地址
       "port": 8080,
       "protocol": "vless",
       "settings": {
         "clients": [
           {
-            "email": "hf-xhttp",
+            "email": "ng-xhttp",
             "flow": "xtls-rprx-vision",
             "id": "UUID"
           }
