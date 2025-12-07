@@ -1,13 +1,8 @@
 {
   "log": {
-    "access": "none",
-    "dnsLog": false,
-    "error": "",
-    "loglevel": "warning",
-    "maskAddress": ""
+    "loglevel": "warning"
   },
   "dns": {
-    "queryStrategy": "UseIP",
     "servers": [
       "8.8.8.8",
       "8.8.4.4",
