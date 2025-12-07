@@ -1,23 +1,16 @@
 {
   "log": {
-    "access": "none",
-    "dnsLog": false,
-    "error": "",
-    "loglevel": "warning",
-    "maskAddress": ""
+    "loglevel": "warning"
   },
   "dns": {
-    "queryStrategy": "UseIP",
     "servers": [
-      "8.8.8.8",
-      "8.8.4.4",
-      "2001:4860:4860::8888",
-      "2001:4860:4860::8844"
+      "1.1.1.1",
+      "8.8.8.8"
     ]
   },
   "inbounds": [
     {
-      "listen": null,
+      "listen": "127.0.0.1",
       "port": 8080,
       "protocol": "vless",
       "settings": {
