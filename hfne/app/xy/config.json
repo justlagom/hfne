@@ -1,8 +1,13 @@
 {
   "log": {
-    "loglevel": "warning"
+    "access": "none",
+    "dnsLog": false,
+    "error": "",
+    "loglevel": "warning",
+    "maskAddress": ""
   },
   "dns": {
+    "queryStrategy": "UseIP",
     "servers": [
       "8.8.8.8",
       "8.8.4.4",
@@ -33,7 +38,7 @@
         "xhttpSettings": {
           "host": "",
           "mode": "auto",
-          "path": "/b4386f03"
+          "path": "/b3a053a4"
         }
       },
       "sniffing": {
@@ -52,8 +57,33 @@
     {
       "protocol": "freedom",
       "settings": {
-        "domainStrategy":"UseIP"
-      }
+        "domainStrategy": "UseIP"
+      },
+      "tag": "direct"
+    },
+    {
+      "protocol": "blackhole",
+      "settings": {},
+      "tag": "blocked"
     }
-  ]
+  ],
+  "routing": {
+    "domainStrategy": "AsIs",
+    "rules": [
+      {
+        "ip": [
+          "geoip:private"
+        ],
+        "outboundTag": "blocked",
+        "type": "field"
+      },
+      {
+        "outboundTag": "blocked",
+        "protocol": [
+          "bittorrent"
+        ],
+        "type": "field"
+      }
+    ]
+  }
 }
