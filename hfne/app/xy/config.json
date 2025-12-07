@@ -49,9 +49,6 @@
       }
     }
   ],
-  "routing": {
-    "rules": []
-  },
   "outbounds": [
     {
       "protocol": "freedom",
