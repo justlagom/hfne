@@ -60,7 +60,7 @@ COPY --from=builder /app/xy /usr/local/bin/xy
 COPY --from=builder /app/supercronic /usr/local/bin/supercronic
 
 #暴露端口
-EXPOSE 7860
+EXPOSE 2053
 
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["supervisord", "-c", "/app/supervisor/supervisord.conf"]
