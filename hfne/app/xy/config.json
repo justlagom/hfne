@@ -1,6 +1,6 @@
 {
   "log": {
-    "loglevel": "warning"
+    "loglevel": "debug"
   },
   "dns": {
     "servers": [
@@ -11,14 +11,13 @@
   "inbounds": [
     {
       "listen": null,
-      "port": 80,
+      "port": 8880,
       "protocol": "vless",
       "settings": {
         "clients": [
           {
-            "email": "user@example.com",
-            "flow": "xtls-rprx-vision",
-            "id": "12345678-1234-1234-1234-123456789012"
+            "id": "12345678-1234-1234-1234-123456789012",
+            "flow": "xtls-rprx-vision"
           }
         ],
         "decryption": "mlkem768x25519plus.native.600s.IASRX3nSekp4w75a13lfrUlfcPkigvk39yETGzU3gHc",
@@ -27,24 +26,19 @@
       },
       "streamSettings": {
         "network": "xhttp",
-        "security": "none",
         "xhttpSettings": {
-          "headers": {},
           "host": "",
           "mode": "auto",
-          "noSSEHeader": false,
           "path": "/b3a053a4",
-          "scMaxBufferedPosts": 30,
-          "scMaxEachPostBytes": "1000000",
-          "scStreamUpServerSecs": "20-80",
-          "xPaddingBytes": "100-1000"
         }
+        "security": "none",
       },
       "sniffing": {
         "enabled": true,
         "destOverride": [
           "http",
-          "tls"
+          "tls",
+          "quic"
         ]
       }
     }
