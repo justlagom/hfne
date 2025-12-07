@@ -1,24 +1,31 @@
 {
   "log": {
-    "loglevel": "warning"
+    "access": "none",
+    "dnsLog": false,
+    "error": "",
+    "loglevel": "warning",
+    "maskAddress": ""
   },
   "dns": {
+    "queryStrategy": "UseIP",
     "servers": [
-      "1.1.1.1",
-      "8.8.8.8"
+      "8.8.8.8",
+      "8.8.4.4",
+      "2001:4860:4860::8888",
+      "2001:4860:4860::8844"
     ]
   },
   "inbounds": [
     {
-      "listen": null,
+      "listen": "127.0.0.1",
       "port": 8080,
       "protocol": "vless",
       "settings": {
         "clients": [
           {
-            "email": "nginxxray",
-            "flow": "xtls-rprx-vision",
             "id": "UUID" // 注意: 这个UUID会在entrypoint.sh中被替换
+            "email": "user@example.com",
+            "flow": "xtls-rprx-vision"
           }
         ],
         "decryption": "mlkem768x25519plus.native.600s.IASRX3nSekp4w75a13lfrUlfcPkigvk39yETGzU3gHc",
@@ -29,32 +36,54 @@
         "network": "xhttp",
         "security": "none",
         "xhttpSettings": {
-          "headers": {},
           "host": "",
           "mode": "auto",
-          "noSSEHeader": false,
-          "path": "/b3a053a4",
-          "scMaxBufferedPosts": 30,
-          "scMaxEachPostBytes": "1000000",
-          "scStreamUpServerSecs": "20-80",
-          "xPaddingBytes": "100-1000"
+          "path": "/b4386f03"
         }
       },
       "sniffing": {
-        "enabled": true,
         "destOverride": [
           "http",
-          "tls"
-        ]
-      }
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "enabled": true
+      },
+      "tag": "vless-inbound"
     }
   ],
   "outbounds": [
     {
       "protocol": "freedom",
       "settings": {
-        "domainStrategy":"UseIP"
-      }
+        "domainStrategy": "UseIP"
+      },
+      "tag": "direct"
+    },
+    {
+      "protocol": "blackhole",
+      "settings": {},
+      "tag": "blocked"
     }
-  ]
+  ],
+  "routing": {
+    "domainStrategy": "AsIs",
+    "rules": [
+      {
+        "ip": [
+          "geoip:private"
+        ],
+        "outboundTag": "blocked",
+        "type": "field"
+      },
+      {
+        "outboundTag": "blocked",
+        "protocol": [
+          "bittorrent"
+        ],
+        "type": "field"
+      }
+    ]
+  }
 }
