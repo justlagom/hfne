@@ -9,8 +9,8 @@
     ]
   },
   "inbounds": [
-       {
-      "listen": null, 
+    {
+      "listen": null,
       "port": 8080,
       "protocol": "vless",
       "settings": {
@@ -18,7 +18,7 @@
           {
             "email": "nginxxray",
             "flow": "xtls-rprx-vision",
-            "id": "UUID"
+            "id": "UUID" // 注意: 这个UUID会在entrypoint.sh中被替换
           }
         ],
         "decryption": "mlkem768x25519plus.native.600s.IASRX3nSekp4w75a13lfrUlfcPkigvk39yETGzU3gHc",
@@ -50,28 +50,13 @@
     }
   ],
   "routing": {
-    "rules": [
-      {
-        "type": "field",
-        "domain": [
-          "v.com"
-        ],
-        "outboundTag": "force-to-ip"
-      }
-    ]
+    "rules": []
   },
   "outbounds": [
     {
       "protocol": "freedom",
       "settings": {
         "domainStrategy":"UseIP"
-      }
-    },
-    {
-      "tag": "force-to-ip",
-      "protocol": "freedom",
-      "settings": {
-        "redirect": "127.0.0.1:0"
       }
     }
   ]
