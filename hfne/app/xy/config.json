@@ -1,13 +1,8 @@
 {
   "log": {
-    "access": "none",
-    "dnsLog": false,
-    "error": "",
-    "loglevel": "warning",
-    "maskAddress": ""
+    "loglevel": "warning"
   },
   "dns": {
-    "queryStrategy": "UseIP",
     "servers": [
       "8.8.8.8",
       "8.8.4.4",
@@ -18,23 +13,20 @@
   "inbounds": [
     {
       "listen": "127.0.0.1",
-      "port": 8080,
+      "port": 7860,
       "protocol": "vless",
       "settings": {
+        "decryption": "none",
         "clients": [
           {
-            "id": "UUID" // 注意: 这个UUID会在entrypoint.sh中被替换
             "email": "user@example.com",
-            "flow": "xtls-rprx-vision"
+            "flow": "xtls-rprx-vision",
+            "id": "UUID" // 注意: 这个UUID会在entrypoint.sh中被替换
           }
-        ],
-        "decryption": "mlkem768x25519plus.native.600s.IASRX3nSekp4w75a13lfrUlfcPkigvk39yETGzU3gHc",
-        "encryption": "mlkem768x25519plus.native.0rtt.fRLKjkBNx1N6ceiqcqilb46WNj4yvl4SgXklAFkvNhE",
-        "selectedAuth": "X25519, not Post-Quantum"
+        ]
       },
       "streamSettings": {
         "network": "xhttp",
-        "security": "none",
         "xhttpSettings": {
           "host": "",
           "mode": "auto",
@@ -42,48 +34,27 @@
         }
       },
       "sniffing": {
+        "enabled": true,
         "destOverride": [
           "http",
           "tls",
           "quic",
           "fakedns"
-        ],
-        "enabled": true
-      },
-      "tag": "vless-inbound"
+        ]
+      }
     }
   ],
+  "routing": {
+    "rules": [
+      
+    ]
+  },
   "outbounds": [
     {
       "protocol": "freedom",
       "settings": {
-        "domainStrategy": "UseIP"
-      },
-      "tag": "direct"
-    },
-    {
-      "protocol": "blackhole",
-      "settings": {},
-      "tag": "blocked"
-    }
-  ],
-  "routing": {
-    "domainStrategy": "AsIs",
-    "rules": [
-      {
-        "ip": [
-          "geoip:private"
-        ],
-        "outboundTag": "blocked",
-        "type": "field"
-      },
-      {
-        "outboundTag": "blocked",
-        "protocol": [
-          "bittorrent"
-        ],
-        "type": "field"
+        "domainStrategy":"UseIP"
       }
-    ]
-  }
+    }
+  ]
 }
