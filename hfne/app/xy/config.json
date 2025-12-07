@@ -16,14 +16,16 @@
       "port": 8080,
       "protocol": "vless",
       "settings": {
-        "decryption": "none",
         "clients": [
           {
             "email": "user@example.com",
             "flow": "xtls-rprx-vision",
             "id": "12345678-1234-1234-1234-123456789012" // 注意: 这个UUID会在entrypoint.sh中被替换
           }
-        ]
+        ],
+        "decryption": "mlkem768x25519plus.native.600s.IASRX3nSekp4w75a13lfrUlfcPkigvk39yETGzU3gHc",
+        "encryption": "mlkem768x25519plus.native.0rtt.fRLKjkBNx1N6ceiqcqilb46WNj4yvl4SgXklAFkvNhE",
+        "selectedAuth": "X25519, not Post-Quantum"
       },
       "streamSettings": {
         "network": "xhttp",
