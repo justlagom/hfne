@@ -10,7 +10,7 @@
   },
   "inbounds": [
     {
-      "listen": null,
+      "listen": "127.0.0.1",
       "port": 8080,
       "protocol": "vless",
       "settings": {
@@ -27,19 +27,24 @@
       },
       "streamSettings": {
         "network": "xhttp",
+        "security": "none",
         "xhttpSettings": {
+          "headers": {},
           "host": "",
           "mode": "auto",
-          "path": "/b3a053a4"
+          "noSSEHeader": false,
+          "path": "/b3a053a4",
+          "scMaxBufferedPosts": 30,
+          "scMaxEachPostBytes": "1000000",
+          "scStreamUpServerSecs": "20-80",
+          "xPaddingBytes": "100-1000"
         }
       },
       "sniffing": {
         "enabled": true,
         "destOverride": [
           "http",
-          "tls",
-          "quic",
-          "fakedns"
+          "tls"
         ]
       }
     }
