@@ -66,7 +66,7 @@ COPY --from=builder /app/xy /usr/local/bin/xy
 COPY --from=builder /app/supercronic /usr/local/bin/supercronic
 COPY --from=builder /app/cloudflared /usr/local/bin/cloudflared
 
-EXPOSE 80
+EXPOSE 8001
 
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["supervisord", "-c", "/app/supervisor/supervisord.conf"]
