@@ -1,15 +1,15 @@
 -----
 
-# 🚀 HFne - Hugging Face ENC+Vioion+Xhttp 代理节点
+# 🚀 HFne - Hugging Face ENC+Vioion+WS 代理节点
 
 [](https://www.google.com/search?q=https://github.com/justlagom/hfne)
 [](https://huggingface.co/new-space)
 
-一个部署在 **Hugging Face Spaces** 上的 **ENC+Vioion+Xhttp** 代理节点项目。利用 Hugging Face Spaces 的免费算力和环境，为您提供一个快速且可定制的代理服务。
+一个部署在 **Hugging Face Spaces** 上的 **ENC+Vioion+WS** 代理节点项目。利用 Hugging Face Spaces 的免费算力和环境，为您提供一个快速且可定制的代理服务。
 
 ## ✨ 主要特性
 
-  * **多协议支持:** 集成了 **ENC**、**Vioion** 和 **Xhttp** 代理协议。
+  * **多协议支持:** 集成了 **ENC**、**Vioion** 和 **WS** 代理协议。
   * **平台优势:** 部署在 Hugging Face Spaces，享受稳定的容器环境和便捷的部署流程。
   * **灵活配置:** 所有核心配置通过环境变量传入，部署维护简便。
 
@@ -17,8 +17,8 @@
 
 部署此项目非常简单，主要通过配置 Hugging Face Spaces 的环境变量完成。
 
-## hfne/app/xy/config.json-可选择手搓其他xray配置
-vless://%E8%87%AA%E5%AE%9A%E4%B9%89uuid@项目域名:443?encryption=mlkem768x25519plus.native.0rtt.fRLKjkBNx1N6ceiqcqilb46WNj4yvl4SgXklAFkvNhE&flow=xtls-rprx-vision&security=tls&sni=%E9%A1%B9%E7%9B%AE%E5%9F%9F%E5%90%8D&fp=chrome&alpn=h2&insecure=0&allowInsecure=0&type=xhttp&path=%2Fb3a053a4&mode=auto#%E6%A8%A1%E6%9D%BFUS%20ENC-Vision-Xhttp%EF%BC%88Hugging%20Face%EF%BC%89
+## hfne/app/xy/config.json-可选择手搓修改xray配置（例如path路径同时注意修改nginx分流路径设置）
+vless://%E5%A1%AB%E5%85%A5UUID@www.shopify.com（填入优选ip/域名）:443?encryption=mlkem768x25519plus.native.0rtt.fRLKjkBNx1N6ceiqcqilb46WNj4yvl4SgXklAFkvNhE&flow=xtls-rprx-vision&security=tls&sni=%E5%A1%AB%E5%85%A5%E5%9B%BA%E5%AE%9A%E9%9A%A7%E9%81%93%E5%9F%9F%E5%90%8D&fp=chrome&alpn=http%2F1.1&insecure=0&allowInsecure=0&type=ws&path=%2Fb3a053a4#US%20ENC-Vision-WS%EF%BC%88Hugging%20face%EF%BC%89-clone
 
 ### 步骤 1: 创建新的 Space
 
@@ -43,7 +43,9 @@ vless://%E8%87%AA%E5%AE%9A%E4%B9%89uuid@项目域名:443?encryption=mlkem768x255
 | 变量名 | 描述 | 示例值 |
 | :--- | :--- | :--- |
 | **`UUID`** | 必备 | `随你便` |
-| **`DOMAIN`** | 必备 | `空间创建后可见分配的项目域名` |
+| **`DOMAIN`** | 必备 | `分配的项目域名不是隧道域名` |
+| **`CLOUDFLARED_TOKEN`** | 必备 | `部署cf tunnel时获取token` |
+
 
 ### 步骤 4: 启动 Space
 
