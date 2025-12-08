@@ -36,6 +36,7 @@ LABEL org.opencontainers.image.source="https://github.com/justlagom/hfne"
 ENV TZ=Asia/Shanghai \
     UUID=YOUR_UUID_HERE \
     DOMAIN=YOUR_DOMAIN_HERE \
+    PROXY_PATH=YOUR_PROXY_PATH_HERE \
     CLOUDFLARED_TOKEN=YOUR_CLOUDFLARED_TUNNEL_TOKEN
 
 COPY entrypoint.sh /entrypoint.sh
