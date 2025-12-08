@@ -16,7 +16,7 @@
       "settings": {
         "clients": [
           {
-            "id": "UUID",
+            "id": "UUID", // 注意: 这个UUID会在entrypoint.sh中被替换
             "flow": "xtls-rprx-vision"
           }
         ],
@@ -28,7 +28,7 @@
         "network": "ws",
         "wsSettings": {
           "host": "",
-          "path": "/b3a053a4"
+          "path": "PROXY_PATH_PLACEHOLDER" // 注意: 这个path会在entrypoint.sh中被替换
         },
         "security": "none"
       },
