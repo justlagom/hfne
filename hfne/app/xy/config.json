@@ -1,6 +1,6 @@
 {
   "log": {
-    "loglevel": "debug"
+    "loglevel": "warning"
   },
   "dns": {
     "servers": [
@@ -11,12 +11,12 @@
   "inbounds": [
     {
       "listen": null,
-      "port": 8880,
+      "port": 8080,
       "protocol": "vless",
       "settings": {
         "clients": [
           {
-            "id": "12345678-1234-1234-1234-123456789012",
+            "id": "UUID",
             "flow": "xtls-rprx-vision"
           }
         ],
@@ -25,11 +25,10 @@
         "selectedAuth": "X25519, not Post-Quantum"
       },
       "streamSettings": {
-        "network": "xhttp",
-        "xhttpSettings": {
+        "network": "ws",
+        "wsSettings": {
           "host": "",
-          "mode": "auto",
-          "path": "/b3a053a4",
+          "path": "/b3a053a4"
         }
         "security": "none",
       },
