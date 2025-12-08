@@ -1,15 +1,14 @@
 -----
-
 # 🚀 HFne - Hugging Face ENC+Vioion+WS 代理节点
 
 [](https://www.google.com/search?q=https://github.com/justlagom/hfne)
 [](https://huggingface.co/new-space)
 
-一个部署在 **Hugging Face Spaces** 上的 **ENC+Vioion+WS** 代理节点项目。利用 Hugging Face Spaces 的免费算力和环境，为您提供一个快速且可定制的代理服务。
+一个部署在 **Hugging Face Spaces** 上的 **ENC+Vioion-WS-CDN** 代理节点项目。利用 Hugging Face Spaces 的免费算力和环境，为您提供一个快速且可定制的代理服务。
 
 ## ✨ 主要特性
 
-  * **多协议支持:** 集成了 **ENC**、**Vioion** 和 **WS** 代理协议。
+  * **多协议支持:** 集成了 **ENC**、**Vioion**、**WS**和 **ARGO** 代理协议。
   * **平台优势:** 部署在 Hugging Face Spaces，享受稳定的容器环境和便捷的部署流程。
   * **灵活配置:** 所有核心配置通过环境变量传入，部署维护简便。
 
@@ -18,7 +17,8 @@
 部署此项目非常简单，主要通过配置 Hugging Face Spaces 的环境变量完成。
 
 ## hfne/app/xy/config.json-可选择手搓修改xray配置（例如path路径同时注意修改nginx分流路径设置）
-vless://%E5%A1%AB%E5%85%A5UUID@www.shopify.com（填入优选ip/域名）:443?encryption=mlkem768x25519plus.native.0rtt.fRLKjkBNx1N6ceiqcqilb46WNj4yvl4SgXklAFkvNhE&flow=xtls-rprx-vision&security=tls&sni=%E5%A1%AB%E5%85%A5%E5%9B%BA%E5%AE%9A%E9%9A%A7%E9%81%93%E5%9F%9F%E5%90%8D&fp=chrome&alpn=http%2F1.1&insecure=0&allowInsecure=0&type=ws&path=%2Fb3a053a4#US%20ENC-Vision-WS%EF%BC%88Hugging%20face%EF%BC%89-clone
+vless://%E5%A1%AB%E5%85%A5UUID@填入优选ip/域名:443?encryption=mlkem768x25519plus.native.0rtt.fRLKjkBNx1N6ceiqcqilb46WNj4yvl4SgXklAFkvNhE&flow=xtls-rprx-vision&security=tls&sni=%E5%A1%AB%E5%85%A5%E5%9B%BA%E5%AE%9A%E9%9A%A7%E9%81%93%E5%9F%9F%E5%90%8D&fp=chrome&alpn=http%2F1.1&insecure=0&allowInsecure=0&type=ws&path=%2Fb3a053a4#US%20ENC-Vision-WS%EF%BC%88Hugging%20face%EF%BC%89
+
 
 ### 步骤 1: 创建新的 Space
 
@@ -33,7 +33,7 @@ vless://%E5%A1%AB%E5%85%A5UUID@www.shopify.com（填入优选ip/域名）:443?en
 由于您使用的是 Docker SDK，您需要将本项目仓库中的所有文件（特别是 `Dockerfile` 和您的核心代码）上传到新的 Space 仓库中。
 
 > **提示:** 您可以直接 Fork `justlagom/hfne` 仓库，然后创建自己的docker镜像文件。
-> 找到 **"files"** 编辑dockerfile - from ghcr.io/xxxxxxxxxxx
+> 找到 **"files"** 编辑dockerfile - from ghcr.io/自己的镜像名称
 > **Commint changes to main**
 
 ### 步骤 3: 配置环境变量
