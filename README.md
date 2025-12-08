@@ -17,7 +17,8 @@
 部署此项目非常简单，主要通过配置 Hugging Face Spaces 的环境变量完成。
 
 ## hfne/app/xy/config.json-可选择手搓修改xray配置（例如path路径同时注意修改nginx分流路径设置）
-vless://%E5%A1%AB%E5%85%A5UUID@填入优选ip/域名:443?encryption=mlkem768x25519plus.native.0rtt.fRLKjkBNx1N6ceiqcqilb46WNj4yvl4SgXklAFkvNhE&flow=xtls-rprx-vision&security=tls&sni=%E5%A1%AB%E5%85%A5%E5%9B%BA%E5%AE%9A%E9%9A%A7%E9%81%93%E5%9F%9F%E5%90%8D&fp=chrome&alpn=http%2F1.1&insecure=0&allowInsecure=0&type=ws&path=%2Fb3a053a4#US%20ENC-Vision-WS%EF%BC%88Hugging%20face%EF%BC%89
+vless://%E5%A1%AB%E5%85%A5%E8%87%AA%E5%AE%9A%E4%B9%89UUID@填入优选ip/域名:443?encryption=mlkem768x25519plus.native.0rtt.fRLKjkBNx1N6ceiqcqilb46WNj4yvl4SgXklAFkvNhE&flow=xtls-rprx-vision&security=tls&sni=%E5%A1%AB%E5%85%A5%E5%9B%BA%E5%AE%9A%E9%9A%A7%E9%81%93%E5%9F%9F%E5%90%8D&fp=chrome&alpn=http%2F1.1&insecure=0&allowInsecure=0&type=ws&path=%E5%A1%AB%E5%85%A5%E8%87%AA%E5%AE%9A%E4%B9%89path#US%20ENC-Vision-WS%EF%BC%88Hugging%20face%EF%BC%89
+
 
 
 ### 步骤 1: 创建新的 Space
