@@ -30,7 +30,7 @@
           "host": "",
           "path": "/b3a053a4"
         },
-        "security": "none",
+        "security": "none"
       },
       "sniffing": {
         "enabled": true,
