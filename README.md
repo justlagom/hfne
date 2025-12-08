@@ -1,10 +1,10 @@
 -----
-# 🚀 HFne - Hugging Face ENC+Vioion-WS-CDN 代理节点
+# 🚀 HFne - Hugging Face ENC+Vioion-WS-ARGO 代理节点
 
 [](https://www.google.com/search?q=https://github.com/justlagom/hfne)
 [](https://huggingface.co/new-space)
 
-一个部署在 **Hugging Face Spaces** 上的 **ENC+Vioion-WS-CDN** 代理节点项目。利用 Hugging Face Spaces 的免费算力和环境，为您提供一个快速且可定制的代理服务。
+一个部署在 **Hugging Face Spaces** 上的 **ENC+Vioion-WS-ARGO** 代理节点项目。利用 Hugging Face Spaces 的免费算力和环境，为您提供一个快速且可定制的代理服务。
 
 ## ✨ 主要特性
 
