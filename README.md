@@ -1,5 +1,5 @@
 -----
-# 🚀 HFne - Hugging Face ENC+Vioion-Xhttp-ARGO 代理节点
+# 🚀 Hugging Face - Hugging Face ENC+Vioion-Xhttp-ARGO 代理节点
 
 [](https://www.google.com/search?q=https://github.com/justlagom/hfne)
 [](https://huggingface.co/new-space)
